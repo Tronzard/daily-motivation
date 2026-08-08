@@ -7,6 +7,10 @@ class App extends React.Component {
     advice: "",
   };
 
+  componentDidMount() {
+    this.fetchAdvice();
+  }
+
   fetchAdvice = () => {
     axios
       .get("https://api.adviceslip.com/advice")
